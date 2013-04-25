@@ -2,6 +2,9 @@
  * grunt-jsonmin
  * https://github.com/mattstyles/grunt-jsonmin
  *
+ * a grunt task wrapper for JSON.minify
+ * https://github.com/getify/JSON.minify
+ *
  * Copyright (c) 2013 Matt Styles
  * Licensed under the MIT license.
  */
@@ -10,41 +13,21 @@
 
 module.exports = function(grunt) {
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+  grunt.registerMultiTask('jsonmin', 'A grunt task wrapper for getify/JSON.minify', function() {
 
-  grunt.registerMultiTask('jsonmin', 'Your task description goes here.', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
+    // Get the task options
+    // @todo actually do something with these options
+    var options = {
+      stripWhitespace   : this.options.stripWhitespace || true,
+      stripComments     : this.options.stripComments || true
+    };
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+    // Minify and output
+    grunt.file.write( this.files[0].dest, require('./lib/json-minify/minify.json.js').JSON.minify( grunt.file.read( this.files[0].src ) ) );
 
-      // Handle options.
-      src += options.punctuation;
+    grunt.log.writeln('grunt-jsonmin completed successfully');
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
-    });
+    //@todo add error checking, logging etc.
   });
 
 };

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         '<%= nodeunit.tests %>'
       ],
       options: {
-        jshintrc: '.jshintrc',
+        jshintrc: '.jshintrc'
       }
     },
 
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           stripComments: true
         },
         files: {
-          'tmp/testmin.json': [ 'test/fixtures/test.json' ]
+          'tmp/testmin.json': 'test/fixtures/test.json'
         }
       }
     },
