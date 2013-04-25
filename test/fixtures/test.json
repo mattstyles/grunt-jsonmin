@@ -1,0 +1,15 @@
+// A comment inside a json file
+{
+  "filename" : "json-file-test",
+  "anotherKey": "anotherValue",
+  // Another comment nested in the json
+  // These should be stripped by the grunt task
+  "how"		:   "about",
+  "some"	:   "whitespace",
+  "this"	:  	"will",
+  "get"		:	"removed",
+  "object" : {
+    "nested"	: "variables",
+    "boolean"	: true
+  }
+}
