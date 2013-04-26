@@ -32,9 +32,9 @@ grunt.initConfig({
     files: {
       "path/to/destination/file" : "path/to/source/file",
       "path/to/another/destination" : [ "multiple/source/files", "are/supported", "as/an/array" ]
-    },
-  },
-})
+    }
+  }
+});
 ```
 
 ### Options
@@ -51,7 +51,7 @@ Strips whitespace from the specified json file/s
 Type: `Boolean`
 Default value: `true`
 
-Strips comments (`//`) from the specified json file/s
+Strips comments (`// ... \n`) from the specified json file/s
 
 ### Usage Examples
 See the [Gruntfile](https://github.com/mattstyles/grunt-jsonmin/blob/master/Gruntfile.js) for the usage examples
