@@ -1,0 +1,1 @@
+{"example":{"this-is-an-example":"of-a-json-file","with-comments":true},"foo":"bar","baz":"quuz"},{"filename":"json-file-test","anotherKey":"anotherValue","how":"about","some":"whitespace","this":"will","get":"removed","object":{"nested":"variables","boolean":true}}

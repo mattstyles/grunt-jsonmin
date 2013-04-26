@@ -1,0 +1,10 @@
+{
+  "example" : {
+    "this-is-an-example" : "of-a-json-file",
+    "with-comments"     : true
+  },
+  // It will minified
+  // the test case will also see it being concatenated to another json file
+  "foo" : "bar",
+  "baz" : "quuz"
+}
