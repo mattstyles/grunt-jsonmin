@@ -25,13 +25,15 @@ In your project's Gruntfile, add a section named `jsonmin` to the data object pa
 ```js
 grunt.initConfig({
   jsonmin: {
-    options: {
-      stripWhitespace: true || false,
-      stripComments: true || false
-    },
-    files: {
-      "path/to/destination/file" : "path/to/source/file",
-      "path/to/another/destination" : [ "multiple/source/files", "are/supported", "as/an/array" ]
+    dev: {
+      options: {
+        stripWhitespace: true || false,
+        stripComments: true || false
+      },
+      files: {
+        "path/to/destination/file" : "path/to/source/file",
+        "path/to/another/destination" : [ "multiple/source/files", "are/supported", "as/an/array" ]
+      }
     }
   }
 });
@@ -55,7 +57,7 @@ _Option not currently supported - always strips comments_
 
 Strips comments (`// ... \n`) from the specified json file/s
 
-### Usage Examples
+## Usage Examples
 See the [Gruntfile](https://github.com/mattstyles/grunt-jsonmin/blob/master/Gruntfile.js) for the usage examples
 from the test cases
 
