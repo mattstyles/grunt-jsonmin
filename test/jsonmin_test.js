@@ -34,10 +34,10 @@ exports.jsonmin = {
   stripAll: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/testmin.json');
-    var expected = grunt.file.read('test/expected/testmin.json');
+    var actual = grunt.file.read('tmp/stripall.json');
+    var expected = grunt.file.read('test/expected/stripallmin.json');
 
-    test.equal(actual, expected, 'should strip comments and whitespace from a json file');
+    test.equal(actual, expected, 'should strip comments and whitespace from a single json file');
 
     test.done();
   }
