@@ -36,7 +36,8 @@ module.exports = function(grunt) {
           stripComments: true
         },
         files: {
-          'tmp/testmin.json': 'test/fixtures/test.json'
+          'tmp/stripall.json': 'test/fixtures/stripall.json',
+          'tmp/multiple.json': ['test/fixtures/multiple.json', 'test/fixtures/stripall.json']
         }
       }
     },

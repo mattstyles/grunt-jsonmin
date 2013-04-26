@@ -23,11 +23,33 @@ module.exports = function(grunt) {
     };
 
     // Minify and output
-    grunt.file.write( this.files[0].dest, require('./lib/json-minify/minify.json.js').JSON.minify( grunt.file.read( this.files[0].src ) ) );
+    this.files.forEach( function( file ) {
+      // Concat the files array
+      var src = file.src.filter( function( fileSrc ) {
+        if ( !grunt.file.exists( fileSrc ) ) {
+          grunt.log.warn( 'Source file "' + fileSrc + '" not found.' );
+          return false;
+        } else {
+          return true;
+        }
+      }).map ( function( fileSrc ) {
+        // Read the source file
+        return grunt.file.read( fileSrc );
+      }).join( grunt.util.normalizelf( ', ' ) );
 
+      // minify the source files
+      src = require( './lib/json-minify/minify.json.js' ).JSON.minify( src );
+
+      // write to the output file
+      grunt.file.write( file.dest, src );
+
+      // user feedback
+      grunt.log.writeln('"' + file.dest + '" created.');
+
+    });
+
+    // Write out success message
     grunt.log.writeln('grunt-jsonmin completed successfully');
-
-    //@todo add error checking, logging etc.
   });
 
 };
