@@ -43,13 +43,15 @@ grunt.initConfig({
 Type: `Boolean`
 Default value: `true`
 
-_Not currently supported_
+_Option not currently supported - always strips comments_
 
 Strips whitespace from the specified json file/s
 
 #### options.stripComments
 Type: `Boolean`
 Default value: `true`
+
+_Option not currently supported - always strips comments_
 
 Strips comments (`// ... \n`) from the specified json file/s
 
