@@ -1,7 +1,7 @@
 {
   "name": "grunt-jsonmin",
   "description": "A wrapper for getify/JSON.minify as a grunt task",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/mattstyles/grunt-jsonmin",
   "author": {
     "name": "Matt Styles",
@@ -38,6 +38,8 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "json",
+    "minify"
   ]
 }
