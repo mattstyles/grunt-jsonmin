@@ -1,5 +1,4 @@
-# grunt-jsonmin [![Build
-  Status](https://travis-ci.org/mattstyles/grunt-jsonmin.png?branch=master)](https://travis-ci.org/mattstyles/grunt-jsonmin)
+# grunt-jsonmin [![Build Status](https://travis-ci.org/mattstyles/grunt-jsonmin.png?branch=master)](https://travis-ci.org/mattstyles/grunt-jsonmin)
 
 > A wrapper for getify/JSON.minify as a grunt task
 
@@ -66,5 +65,10 @@ from the test cases
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* 01.05.13 -- v0.2.4 -- Added Travis build
 * 26.04.13 -- v0.2.0 -- Minifies multiple source JSON files
 * 25.04.13 -- v0.1.0 -- Minifies a single JSON file
+
+---
+
+Task submitted by [Matt Styles](http://veryfizzyjelly.com/coding/introducing-grunt-booty) [@veryfizzyjelly](https://twitter.com/veryfizzyjelly)
