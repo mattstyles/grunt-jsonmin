@@ -1,4 +1,5 @@
-# grunt-jsonmin
+# grunt-jsonmin [![Build
+  Status](https://travis-ci.org/mattstyles/grunt-jsonmin.png?branch=master)](https://travis-ci.org/mattstyles/grunt-jsonmin)
 
 > A wrapper for getify/JSON.minify as a grunt task
 
