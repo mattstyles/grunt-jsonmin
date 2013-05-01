@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     });
 
     // Write out success message
-    grunt.log.writeln('grunt-jsonmin completed successfully');
+	grunt.log.writeln( '✔'.magenta + ' grunt-jsonmin completed successfully' );
   });
 
 };
